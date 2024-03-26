@@ -519,3 +519,13 @@ footer {
 .quick-links-content ul li:hover {
   transform: translateX(5px);
 }
+.a {
+  width: 100%;
+  height: 80%;
+  overflow-y: visible;
+  border: 1px solid transparent;
+}
+
+.a::-webkit-scrollbar {
+  display: none;
+}
