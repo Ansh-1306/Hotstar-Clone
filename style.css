@@ -45,6 +45,9 @@ body {
 .nav-links {
   margin-top: 10px;
   display: flex;
+  padding: 20px;
+    width: 600px;
+    justify-content: space-evenly;
   list-style-type: none;
   color: #fff;
 }
@@ -52,6 +55,7 @@ body {
 .nav-items a {
   text-decoration: none;
   margin-left: 20px;
+  font-size: 20px;
   text-transform: capitalize;
   color: #fff;
   opacity: 0.9;
@@ -312,6 +316,7 @@ body {
 }
 
 .card:hover .card-body {
+  font-family: serif;
   opacity: 1;
 }
 
@@ -327,13 +332,15 @@ body {
   padding: 10px;
   transition: 0.5s;
 }
-
+.card-body {
+  font-family: serif;
+}
 .name {
   color: #fff;
   font-size: 15px;
   font-weight: 700;
   text-transform: capitalize;
-  margin-top: 40%;
+  margin-top: 50%;
 }
 
 .des {
@@ -509,4 +516,52 @@ footer {
 
 .a::-webkit-scrollbar {
   display: none;
+}
+.hvr-float-shadow12 {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(255, 255, 255, 0);
+  position: relative;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+}
+
+.hvr-float-shadow12:before {
+  pointer-events: none;
+  position: absolute;
+  z-index: -1;
+  content: '';
+  top: 100%;
+  left: 5%;
+  height: 10px;
+  width: 90%;
+  opacity: 0;
+  background: -webkit-radial-gradient(center, ellipse, rgb(245, 222, 179, 0.35) 0%, rgba(245, 222, 179, 0) 80%);
+  background: radial-gradient(ellipse at center, rgb(245, 222, 179, 0.35) 0%, rgba(245, 222, 179, 0) 80%);
+  /* W3C */
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform, opacity;
+  transition-property: transform, opacity;
+}
+
+.hvr-float-shadow12:hover,
+.hvr-float-shadow12:focus,
+.hvr-float-shadow12:active {
+  -webkit-transform: translateY(-5px);
+  transform: translateY(-5px);
+  /* move the element up by 5px */
+}
+
+.hvr-float-shadow12:hover:before,
+.hvr-float-shadow12:focus:before,
+.hvr-float-shadow12:active:before {
+  opacity: 1;
+  -webkit-transform: translateY(5px);
+  transform: translateY(5px);
+  /* move the element down by 5px (it will stay in place because it's attached to the element that also moves up 5px) */
 }
