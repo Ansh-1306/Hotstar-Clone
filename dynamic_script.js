@@ -426,7 +426,7 @@ function createCard() {
 
         card.appendChild(img);
         card.appendChild(cardBody);
-
+        
         if(item.recommended){
             Recommended.appendChild(card)
         }
